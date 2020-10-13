@@ -1,6 +1,7 @@
 {
   "name": "american-british-english-translator",
-  "version": "1.0.0",
+  "version": "0.1.1",
+  "author": "Kevan Worthington",
   "description": "Quality Assurance 5: American / British English Translator",
   "main": "server.js",
   "scripts": {
