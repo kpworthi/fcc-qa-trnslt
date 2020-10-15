@@ -24,8 +24,8 @@ suite('Functional Tests', () => {
       `<span class="highlight">...</span>` tags when the "Translate" button is pressed.
     */
     test("Translation appended to the `translated-sentence` `div`", done => {
-
-      // done();
+      assert.fail('Test not yet implemented.')
+      done();
     });
 
     /* 
@@ -34,8 +34,8 @@ suite('Functional Tests', () => {
       `translated-sentence` `div` when the "Translate" button is pressed.
     */
     test("'Everything looks good to me!' message appended to the `translated-sentence` `div`", done => {
-
-      // done();
+      assert.fail('Test not yet implemented.')
+      done();
     });
 
     /* 
@@ -44,8 +44,8 @@ suite('Functional Tests', () => {
       the `error-msg` `div`.
     */
     test("'Error: No text to translate.' message appended to the `translated-sentence` `div`", done => {
-
-      // done();
+      assert.fail('Test not yet implemented.')
+      done();
     });
 
   });
@@ -56,8 +56,8 @@ suite('Functional Tests', () => {
       `divs` are cleared when the "Clear" button is pressed.
     */
     test("Text area, `translated-sentence`, and `error-msg` are cleared", done => {
-
-      // done();
+      assert.fail('Test not yet implemented.')
+      done();
     });
 
   });

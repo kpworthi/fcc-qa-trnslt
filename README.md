@@ -3,6 +3,13 @@
 
 [![Run on Repl.it](https://repl.it/badge/github/freeCodeCamp/boilerplate-project-american-british-english-translator)](https://repl.it/github/freeCodeCamp/boilerplate-project-american-british-english-translator)
 
+
+### Capability Notes:
+1. While translate function does check for a period at the end of the word, most other punctuation will prevent the translator from detecting the word.
+1. Detection should occur for all upper-, lower- and capital-case lettering. Words in random-case or other alternative casing such as camel-case will not have case preserved.
+1. Limited plural support has been implemented. In most cases, the translator will catch translateable words with an 's' at the end.
+1. Will not account for -ed or -ing versions of words.
+
 ### User stories:
 
 1. I can enter a simple sentence into the text area and select whether to translate to British or American English from the dropdown menu.
