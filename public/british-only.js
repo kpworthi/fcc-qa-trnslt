@@ -143,7 +143,7 @@ export const britishOnly = {
   "maths": "math",
   "mole grips": "vise-grips",
   "motorway": "freeway",
-  "muppet": "an incompetent or foolish person",
+  "muppet": "moron",
   "nark": "narc",
   "nappy": "daiper",
   "nosy parker": "nosy",
