@@ -5,10 +5,10 @@
 
 
 ### Capability Notes:
-1. Most punctuation (quotations marks, exclamation points, periods, etc.) should no longer affect translation ability.
+1. Punctuation (quotations marks, exclamation points, periods, etc.) should no longer affect translation ability.
 1. Detection should occur for all upper-, lower- and capital-case lettering. Words in random-case or other alternative casing such as camel-case will not have case preserved.
 1. Limited plural support has been implemented. In most cases, the translator will catch translateable words with an 's' at the end.
-1. Will not account for -ed or -ing versions of words.
+1. Will also try to account for -ed or -ing versions of words.
 
 ### User stories:
 

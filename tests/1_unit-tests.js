@@ -21,6 +21,9 @@ suite('Unit Tests', () => {
         global.document = dom.window.document;
 
         Translator = require('../public/translator.js');
+        document.querySelector('#translate-btn').onclick = Translator.handleClick;
+        document.querySelector('#clear-btn').onclick = Translator.handleClick;
+        console.log('Listeners added!');
       });
   });
 
@@ -137,7 +140,7 @@ suite('Unit Tests', () => {
         const output = 'We watched the <hl>soccer</hl> match for a while.';
         document.querySelector('#text-input').value = input;
 
-        assert.equal(Translator.translate('american'), output);
+        assert.equal(Translator.translate('british'), output);
 
         done();
       });
@@ -147,7 +150,7 @@ suite('Unit Tests', () => {
         const output = '<hl>Tylenol</hl> takes up to an hour to work.';
         document.querySelector('#text-input').value = input;
 
-        assert.equal(Translator.translate('american'), output);
+        assert.equal(Translator.translate('british'), output);
 
         done();
       });
@@ -177,7 +180,7 @@ suite('Unit Tests', () => {
         const output = 'I had a <hl>cookie</hl> then went to the <hl>fish-and-chip shop</hl>.';
         document.querySelector('#text-input').value = input;
 
-        assert.equal(Translator.translate('american'), output);
+        assert.equal(Translator.translate('british'), output);
 
         done();
       });
@@ -187,7 +190,7 @@ suite('Unit Tests', () => {
         const output = "I've just got <hl>odds and ends</hl> in my <hl>fanny pack</hl>.";
         document.querySelector('#text-input').value = input;
 
-        assert.equal(Translator.translate('american'), output);
+        assert.equal(Translator.translate('british'), output);
 
         done();
       });
@@ -197,7 +200,7 @@ suite('Unit Tests', () => {
         const output = "The <hl>swap meet</hl> at Boxted Airfield was called off.";
         document.querySelector('#text-input').value = input;
 
-        assert.equal(Translator.translate('american'), output);
+        assert.equal(Translator.translate('british'), output);
 
         done();
       });
@@ -227,7 +230,7 @@ suite('Unit Tests', () => {
         const output = 'Tea time is usually around 4 or <hl>4:30</hl>.';
         document.querySelector('#text-input').value = input;
 
-        assert.equal(Translator.translate('american'), output);
+        assert.equal(Translator.translate('british'), output);
 
         done();
       });

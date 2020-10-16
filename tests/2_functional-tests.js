@@ -17,14 +17,26 @@ suite('Functional Tests', () => {
     Translator = require('../public/translator.js');
   });
 
-  suite('Function ____()', () => {
+  suite('Function main()', () => {
     /* 
       The translated sentence is appended to the `translated-sentence` `div`
       and the translated words or terms are wrapped in 
       `<span class="highlight">...</span>` tags when the "Translate" button is pressed.
     */
     test("Translation appended to the `translated-sentence` `div`", done => {
-      assert.fail('Test not yet implemented.')
+      const input = 'Mangoes are my favorite fruit.';
+      const output = 'Mangoes are my favourite fruit.';
+      document.querySelector('#text-input').value = input;
+      let clickEvent = document.createEvent('MouseEvents');
+      clickEvent.initEvent('click', true, true);
+      document.querySelector('#translate-btn').dispatchEvent(clickEvent);
+      let result = document.querySelector('#translated-sentence');
+
+      assert.equal(result.textContent, output);
+      assert.equal(result.querySelectorAll('span').length, 1);
+      assert.equal(result.querySelector('span').className, 'highlight');
+      assert.equal(result.querySelector('span').childNodes[0].textContent, 'favourite');
+
       done();
     });
 
@@ -34,7 +46,17 @@ suite('Functional Tests', () => {
       `translated-sentence` `div` when the "Translate" button is pressed.
     */
     test("'Everything looks good to me!' message appended to the `translated-sentence` `div`", done => {
-      assert.fail('Test not yet implemented.')
+      const input = 'Mangoes are a fruit.';
+      const output = 'Mangoes are a fruit.';
+      document.querySelector('#text-input').value = input;
+      let clickEvent = document.createEvent('MouseEvents');
+      clickEvent.initEvent('click', true, true);
+      document.querySelector('#translate-btn').dispatchEvent(clickEvent);
+      let result = document.querySelector('#translated-sentence');
+
+      assert.equal(result.textContent, 'Everything looks good to me!');
+      assert.notEqual(result.textContent, output);
+
       done();
     });
 
@@ -44,19 +66,43 @@ suite('Functional Tests', () => {
       the `error-msg` `div`.
     */
     test("'Error: No text to translate.' message appended to the `translated-sentence` `div`", done => {
-      assert.fail('Test not yet implemented.')
+      document.querySelector('#text-input').value = '';
+      let clickEvent = document.createEvent('MouseEvents');
+      clickEvent.initEvent('click', true, true);
+      document.querySelector('#translate-btn').dispatchEvent(clickEvent);
+      let result = document.querySelector('#translated-sentence');
+      let error = document.querySelector('#error-msg');
+
+      assert.equal(result.textContent, '');
+      assert.equal(error.textContent, 'Error: No text to translate.');
+
       done();
     });
 
   });
 
-  suite('Function ____()', () => {
+  suite('Function clearText()', () => {
     /* 
       The text area and both the `translated-sentence` and `error-msg`
       `divs` are cleared when the "Clear" button is pressed.
     */
     test("Text area, `translated-sentence`, and `error-msg` are cleared", done => {
-      assert.fail('Test not yet implemented.')
+      let result = document.querySelector('#translated-sentence');
+      let error = document.querySelector('#error-msg');
+      let input = document.querySelector('#text-input');
+
+      result.textContent = 'abcd';
+      error.textContent = 'abcd';
+      input.value = 'abcd';
+
+      let clickEvent = document.createEvent('MouseEvents');
+      clickEvent.initEvent('click', true, true);
+      document.querySelector('#clear-btn').dispatchEvent(clickEvent);
+
+      assert.equal(result.textContent, '');
+      assert.equal(error.textContent, '');
+      assert.equal(input.value, '');
+
       done();
     });
 
