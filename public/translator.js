@@ -79,7 +79,7 @@ function main (){
   let errorArea = document.querySelector('#error-msg');
   console.log(option)
 
-  translatedString = translate(option);
+  translatedString = translate(document.querySelector('#text-input').value, option);
   console.log(translatedString);
   translatedArea.textContent = '';
   errorArea.textContent = '';
@@ -113,8 +113,8 @@ function main (){
 
 }
 
-function translate (option){
-  let newString = document.querySelector('#text-input').value;
+function translate (inputString, option){
+  let newString = inputString;
   const bOnlyKeys = Object.keys(britishOnly),
         aOnlyKeys = Object.keys(americanOnly),
         spellVals = Object.values(americanToBritishSpelling),

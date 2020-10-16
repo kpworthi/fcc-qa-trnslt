@@ -34,9 +34,8 @@ suite('Unit Tests', () => {
       test('Mangoes are my favorite fruit. --> Mangoes are my favourite fruit.', done => {
         const input = 'Mangoes are my favorite fruit.';
         const output = 'Mangoes are my <hl>favourite</hl> fruit.';
-        document.querySelector('#text-input').value = input;
 
-        assert.equal(Translator.translate('american'), output);
+        assert.equal(Translator.translate(input, 'american'), output);
 
         done();
       });
@@ -44,9 +43,8 @@ suite('Unit Tests', () => {
       test('I ate yogurt for breakfast. --> I ate yoghurt for breakfast.', done => {
         const input = 'I ate yogurt for breakfast.';
         const output = 'I ate <hl>yoghurt</hl> for breakfast.';
-        document.querySelector('#text-input').value = input;
 
-        assert.equal(Translator.translate('american'), output);
+        assert.equal(Translator.translate(input, 'american'), output);
 
         done();
       });
@@ -54,9 +52,8 @@ suite('Unit Tests', () => {
       test("We had a party at my friend's condo. --> We had a party at my friend's flat.", done => {
         const input = "We had a party at my friend's condo.";
         const output = "We had a party at my friend's <hl>flat</hl>.";
-        document.querySelector('#text-input').value = input;
 
-        assert.equal(Translator.translate('american'), output);
+        assert.equal(Translator.translate(input, 'american'), output);
 
         done();
       });
@@ -64,9 +61,8 @@ suite('Unit Tests', () => {
       test('Can you toss this in the trashcan for me? --> Can you toss this in the bin for me?', done => {
         const input = 'Can you toss this in the trashcan for me?';
         const output = 'Can you toss this in the <hl>bin</hl> for me?';
-        document.querySelector('#text-input').value = input;
 
-        assert.equal(Translator.translate('american'), output);
+        assert.equal(Translator.translate(input, 'american'), output);
 
         done();
       });
@@ -74,9 +70,8 @@ suite('Unit Tests', () => {
       test('The parking lot was full. --> The car park was full.', done => {
         const input = 'The parking lot was full.';
         const output = 'The <hl>car park</hl> was full.';
-        document.querySelector('#text-input').value = input;
 
-        assert.equal(Translator.translate('american'), output);
+        assert.equal(Translator.translate(input, 'american'), output);
 
         done();
       });
@@ -84,9 +79,8 @@ suite('Unit Tests', () => {
       test('Like a high tech Rube Goldberg machine. --> Like a high tech Heath Robinson device.', done => {
         const input = 'Like a high tech Rube Goldberg machine.';
         const output = 'Like a high tech <hl>Heath Robinson device</hl>.';
-        document.querySelector('#text-input').value = input;
 
-        assert.equal(Translator.translate('american'), output);
+        assert.equal(Translator.translate(input, 'american'), output);
 
         done();
       });
@@ -94,9 +88,8 @@ suite('Unit Tests', () => {
       test('To play hooky means to skip class or work. --> To bunk off means to skip class or work.', done => {
         const input = 'To play hooky means to skip class or work.';
         const output = 'To <hl>bunk off</hl> means to skip class or work.';
-        document.querySelector('#text-input').value = input;
 
-        assert.equal(Translator.translate('american'), output);
+        assert.equal(Translator.translate(input, 'american'), output);
 
         done();
       });
@@ -104,9 +97,8 @@ suite('Unit Tests', () => {
       test('No Mr. Bond, I expect you to die. --> No Mr Bond, I expect you to die. ', done => {
         const input = 'No Mr. Bond, I expect you to die.';
         const output = 'No <hl>Mr</hl> Bond, I expect you to die.';
-        document.querySelector('#text-input').value = input;
 
-        assert.equal(Translator.translate('american'), output);
+        assert.equal(Translator.translate(input, 'american'), output);
 
         done();
       });
@@ -114,9 +106,8 @@ suite('Unit Tests', () => {
       test('Dr. Grosh will see you now. --> Dr Grosh will see you now. ', done => {
         const input = 'Dr. Grosh will see you now.';
         const output = '<hl>Dr</hl> Grosh will see you now.';
-        document.querySelector('#text-input').value = input;
 
-        assert.equal(Translator.translate('american'), output);
+        assert.equal(Translator.translate(input, 'american'), output);
 
         done();
       });
@@ -124,9 +115,8 @@ suite('Unit Tests', () => {
       test('Lunch is at 12:15 today. --> Lunch is at 12.15 today.', done => {
         const input = 'Lunch is at 12:15 today.';
         const output = 'Lunch is at <hl>12.15</hl> today.';
-        document.querySelector('#text-input').value = input;
 
-        assert.equal(Translator.translate('american'), output);
+        assert.equal(Translator.translate(input, 'american'), output);
 
         done();
       });
@@ -138,9 +128,8 @@ suite('Unit Tests', () => {
       test('We watched the footie match for a while. --> We watched the soccer match for a while.', done => {
         const input = 'We watched the footie match for a while.';
         const output = 'We watched the <hl>soccer</hl> match for a while.';
-        document.querySelector('#text-input').value = input;
 
-        assert.equal(Translator.translate('british'), output);
+        assert.equal(Translator.translate(input, 'british'), output);
 
         done();
       });
@@ -148,9 +137,8 @@ suite('Unit Tests', () => {
       test('Paracetamol takes up to an hour to work. --> Tylenol takes up to an hour to work.', done => {
         const input = 'Paracetamol takes up to an hour to work.';
         const output = '<hl>Tylenol</hl> takes up to an hour to work.';
-        document.querySelector('#text-input').value = input;
 
-        assert.equal(Translator.translate('british'), output);
+        assert.equal(Translator.translate(input, 'british'), output);
 
         done();
       });
@@ -158,9 +146,8 @@ suite('Unit Tests', () => {
       test('First, caramelise the onions. --> First, caramelize the onions.', done => {
         const input = 'First, caramelise the onions.';
         const output = 'First, <hl>caramelize</hl> the onions.';
-        document.querySelector('#text-input').value = input;
 
-        assert.equal(Translator.translate('british'), output);
+        assert.equal(Translator.translate(input, 'british'), output);
 
         done();
       });
@@ -168,9 +155,7 @@ suite('Unit Tests', () => {
       test('I spent the bank holiday at the funfair. --> I spent the public holiday at the carnival.', done => {
         const input = 'I spent the bank holiday at the funfair.';
         const output = 'I spent the <hl>public holiday</hl> at the <hl>carnival</hl>.';
-        document.querySelector('#text-input').value = input;
-
-        assert.equal(Translator.translate('british'), output);
+        assert.equal(Translator.translate(input, 'british'), output);
 
         done();
       });
@@ -178,9 +163,8 @@ suite('Unit Tests', () => {
       test('I had a bicky then went to the chippy. --> I had a cookie then went to the fish-and-chip shop.', done => {
         const input = 'I had a bicky then went to the chippy.';
         const output = 'I had a <hl>cookie</hl> then went to the <hl>fish-and-chip shop</hl>.';
-        document.querySelector('#text-input').value = input;
 
-        assert.equal(Translator.translate('british'), output);
+        assert.equal(Translator.translate(input, 'british'), output);
 
         done();
       });
@@ -188,9 +172,8 @@ suite('Unit Tests', () => {
       test("I've just got bits and bobs in my bum bag. --> I've just got odds and ends in my fanny pack.", done => {
         const input = "I've just got bits and bobs in my bum bag.";
         const output = "I've just got <hl>odds and ends</hl> in my <hl>fanny pack</hl>.";
-        document.querySelector('#text-input').value = input;
 
-        assert.equal(Translator.translate('british'), output);
+        assert.equal(Translator.translate(input, 'british'), output);
 
         done();
       });
@@ -198,9 +181,8 @@ suite('Unit Tests', () => {
       test("The car boot sale at Boxted Airfield was called off. --> The swap meet at Boxted Airfield was called off.", done => {
         const input = "The car boot sale at Boxted Airfield was called off.";
         const output = "The <hl>swap meet</hl> at Boxted Airfield was called off.";
-        document.querySelector('#text-input').value = input;
 
-        assert.equal(Translator.translate('british'), output);
+        assert.equal(Translator.translate(input, 'british'), output);
 
         done();
       });
@@ -208,9 +190,8 @@ suite('Unit Tests', () => {
       test("Have you met Mrs Kalyani? --> Have you met Mrs. Kalyani?", done => {
         const input = "Have you met Mrs Kalyani?";
         const output = "Have you met <hl>Mrs.</hl> Kalyani?";
-        document.querySelector('#text-input').value = input;
 
-        assert.equal(Translator.translate('british'), output);
+        assert.equal(Translator.translate(input, 'british'), output);
 
         done();
       });
@@ -218,9 +199,8 @@ suite('Unit Tests', () => {
       test("Prof Joyner of King's College, London. --> Prof. Joyner of King's College, London.", done => {
         const input = "Prof Joyner of King's College, London.";
         const output = "<hl>Prof.</hl> Joyner of King's College, London.";
-        document.querySelector('#text-input').value = input;
 
-        assert.equal(Translator.translate('british'), output);
+        assert.equal(Translator.translate(input, 'british'), output);
 
         done();
       });
@@ -228,9 +208,8 @@ suite('Unit Tests', () => {
       test('Tea time is usually around 4 or 4.30. --> Tea time is usually around 4 or 4:30.', done => {
         const input = 'Tea time is usually around 4 or 4.30.';
         const output = 'Tea time is usually around 4 or <hl>4:30</hl>.';
-        document.querySelector('#text-input').value = input;
 
-        assert.equal(Translator.translate('british'), output);
+        assert.equal(Translator.translate(input, 'british'), output);
 
         done();
       });

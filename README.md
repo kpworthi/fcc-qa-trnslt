@@ -3,12 +3,19 @@
 
 [![Run on Repl.it](https://repl.it/badge/github/freeCodeCamp/boilerplate-project-american-british-english-translator)](https://repl.it/github/freeCodeCamp/boilerplate-project-american-british-english-translator)
 
+### Goal:
+Create a client-side american/british translator using the dictionaries provided. An express server is established for the purpose of running unit and functional tests via Mocha/Chai. A simple front-end was provided for testing and demoing.
 
 ### Capability Notes:
 1. Punctuation (quotations marks, exclamation points, periods, etc.) should no longer affect translation ability.
-1. Detection should occur for all upper-, lower- and capital-case lettering. Words in random-case or other alternative casing such as camel-case will not have case preserved.
+1. Detection of casing should occur for all upper-, lower- and capital-case lettering. Words in random-case or other alternative casing such as camel-case will not have case preserved.
 1. Limited plural support has been implemented. In most cases, the translator will catch translateable words with an 's' at the end.
 1. Will also try to account for -ed or -ing versions of words.
+
+### Notes on translate() specifically:
+1. `translate()` accepts two required parameters, `inputString` and `option`.
+1. `main()` reads the value in the `<textarea>` input by the user as well as the current dropdown value, and sends them to translate().
+1. `translate()` returns the translated string, with `<hl></hl>` tags surrounding each translated word or phrase, to then be handled by the `main()` function and converted to `<span>` tags.
 
 ### User stories:
 
@@ -22,10 +29,3 @@
 1. I can press the "Clear Input" button to remove all text from the text area and the `translated-sentence` `div`.
 1. All 20 unit tests are complete and passing. See `/tests/1_unit-tests.js` for the sentences you should write tests for.
 1. All 4 functional tests are complete and passing. See `/tests/2_functional-tests.js` for the functionality you should write tests for.
-
-### Testing and additional notes
-
-* All logic can go into `public/translator.js`.
-* Create all of the unit/functional tests in `tests/1_unit-tests.js` and `tests/2_functional-tests.js`.
-* To run the tests on Repl.it, set NODE_ENV to test without quotes in the .env file.
-* To run the tests in the console, use the command npm run test. To open the Repl.it console, press Ctrl+Shift+P (Cmd if on a Mac) and type "open shell".
